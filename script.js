@@ -18,6 +18,7 @@ function update_preview(url, bite) {
         .replace('{{CONFIG}}', encodeURIComponent(config));
     document.getElementById('preview').setAttribute('src', preview_url);
     document.getElementById('embed-url').textContent = preview_url;
+    document.getElementById('embed-url').setAttribute('href', preview_url);
 }
 
 update_preview();
