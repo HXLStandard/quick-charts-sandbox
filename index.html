@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HDX Smart Charts Sandbox</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <h1>HDX Smart Charts Sandbox</h1>
+
+    <p>
+      Use this sandbox to experiment with writing your own bites
+      for HDX Smart Charts. (Recommend opening a JavaScript console to
+      see error messages from Smart Charts.)
+    </p>
+
+    <form id="config">
+      <label>
+        Source URL for HXL-tagged data [<a href="http://hxlstandard.org">?</a>]
+        <input id="url" name="url" type="url" value="http://data.humdata.org/dataset/e14090a1-5328-4337-b988-a300183b02aa/resource/1344ebff-db88-4fa1-86bc-7aa8b14923cd/download/Marawi_Conflict_3W-as-of_20June2017.teran.xlsx"/>
+      </label>
+      <label>
+        JSON bite
+        <textarea id="bite" name="bite" type="json">{
+  "init":true,
+  "type":"key figure",
+  "filteredValues": [],
+  "ingredient": {
+    "aggregateColumn": null,
+    "valueColumn": "#sector",
+    "aggregateFunction": "distinct-count"
+  },
+  "dataTitle":"#sector",
+  "displayCategory":"Key Figures",
+  "unit":null,
+  "hashCode":795237860,
+  "title":"Unique Values in CLUSTER",
+  "value":null
+}</textarea>
+      </label>
+      <button type="submit">Show</button>
+    </form>
+
+    <section>
+      <h2>Chart preview</h2>
+
+    <iframe id="preview" src=""></iframe>
+
+    <p><b>Embed URL:</b> <span id="embed-url"></span></p>
+
+    </section>
+
+    <script type="text/javascript" src="script.js"></script>
+
+  </body>
+</html>
