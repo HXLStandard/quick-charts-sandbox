@@ -2,6 +2,26 @@ body {
     font-family: arial;
 }
 
+section {
+    padding: 1em;
+}
+
+section#config {
+    float: left;
+    width: 45%;
+    min-width: 400px;
+}
+
+section#preview {
+    float: left;
+    width: 640px;
+    font-size: x-small;
+}
+
+section#embed {
+    clear: left;
+}
+
 label {
     display: block;
     margin: 2ex 0;
@@ -10,7 +30,6 @@ label {
 
 label input, label textarea, label button {
     display: block;
-    font-size: medium;
     width: 100%;
 }
 
@@ -19,19 +38,11 @@ form button {
 }
 
 label textarea {
-    height: 30ex;
-}
-
-form {
-    margin: 4ex 0;
+    height: 300px;
 }
 
 iframe {
-    border: none;
-    max-width: 100%;
-    min-height: 500px;
+    width: 100%;
+    min-height: 480px;
 }
 
-#embed-url {
-    font-size: x-small;
-}

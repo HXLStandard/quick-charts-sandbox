@@ -14,14 +14,16 @@
       blockers.)
     </p>
 
-    <form id="config">
-      <label>
-        Source URL for HXL-tagged data [<a href="http://hxlstandard.org">?</a>]
-        <input id="url" name="url" type="url" value="https://data.humdata.org/dataset/refugees-residing-som"/>
-      </label>
-      <label>
-        JSON bite [<a href="https://humanitarian.atlassian.net/wiki/display/HDX/Quick+Charts+JSON+formats">?</a>]
-        <textarea id="bite" name="bite" type="json">{
+    <section id="config">
+      <h2>Configuration</h2>
+      <form>
+        <label>
+          Source URL for HXL-tagged data [<a href="http://hxlstandard.org">?</a>]
+          <input id="url" name="url" type="url" value="https://data.humdata.org/dataset/refugees-residing-som"/>
+        </label>
+        <label>
+          JSON bite [<a href="https://humanitarian.atlassian.net/wiki/display/HDX/Quick+Charts+JSON+formats">?</a>]
+          <textarea id="bite" name="bite" type="json">{
   "title": "Clusters active",
   "type":"key figure",
   "ingredient": {
@@ -31,19 +33,22 @@
   },
   "unit": "clusters"  
 }</textarea>
-      </label>
-      <button type="submit">Show</button>
-    </form>
+        </label>
+        <button type="submit">Show</button>
+      </form>
+    </section>
 
-    <section>
-      <h2>Chart preview</h2>
+    <section id="preview">
+      <h2>Preview</h2>
 
-    <iframe id="preview" src=""></iframe>
-
-    <p><b>Embed URL:</b> <a id="embed-url"></a></p>
+      <iframe id="chart" src=""></iframe>
 
     </section>
 
+    <section id="embed">
+      <p><b>Embed URL:</b> <a id="embed-url"></a></p>
+    </section>
+      
     <script type="text/javascript" src="script.js"></script>
 
   </body>

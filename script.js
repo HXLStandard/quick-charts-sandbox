@@ -41,7 +41,7 @@ window.onload = function () {
         .replace('{{CONFIG}}', encodeURIComponent(config));
 
     // set up the iFrame
-    document.getElementById('preview').setAttribute('src', preview_url);
+    document.getElementById('chart').setAttribute('src', preview_url);
     document.getElementById('embed-url').textContent = preview_url;
     document.getElementById('embed-url').setAttribute('href', preview_url);
 };
