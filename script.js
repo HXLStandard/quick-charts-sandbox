@@ -4,7 +4,7 @@
 
 // Constant patterns
 var CONFIG_PATTERN = '{"configVersion":2,"bites": [{{BITE}}]}';
-var URL_PATTERN = "https://data.humdata.org/hxlpreview/show;url={{URL}};embeddedConfig={{CONFIG}};singleWidgetMode=true";
+var URL_PATTERN = "https://tools.humdata.org/quickcharts/app/show;url={{URL}};embeddedConfig={{CONFIG}}";
 
 /**
  * Set up on page load
