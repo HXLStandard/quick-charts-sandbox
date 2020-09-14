@@ -5,7 +5,9 @@
 // Constant patterns
 var CONFIG_PATTERN = '{"configVersion":2,"bites": [{{BITE}}]}';
 var URL_PATTERN = "https://tools.humdata.org/quickcharts/app/show;url={{URL}};embeddedConfig={{CONFIG}}";
+var COOKBOOK_URL_PATTERN = "https://data.humdata.org/hxlpreview/show;url={{URL}};embeddedConfig={{CONFIG}};embeddedTitle={{TITLE}}"
 
+URL_PATTERN=COOKBOOK_URL_PATTERN
 /**
  * Set up on page load
  */
@@ -30,6 +32,12 @@ window.onload = function () {
         json_bite = document.getElementById('bite').value;
     }
 
+    var editor = ace.edit("bite-editor");
+    var textarea = document.getElementById("bite");
+    editor.getSession().setValue(textarea.value);
+    editor.getSession().on('change', () => {
+        textarea.value = editor.getSession().getValue();
+    });
 
     // embedded JSON
     var config = CONFIG_PATTERN

@@ -6,29 +6,13 @@ section {
     padding: 1em;
 }
 
-section#config {
-    float: left;
-    width: 45%;
-    min-width: 400px;
-}
-
-section#preview {
-    float: left;
-    width: 640px;
-    font-size: x-small;
-}
-
-section#embed {
-    clear: left;
-}
-
 label {
     display: block;
     margin: 2ex 0;
     font-size: small;
 }
 
-label input, label textarea, label button {
+label input.text, label textarea, label button {
     display: block;
     width: 100%;
 }
@@ -46,3 +30,11 @@ iframe {
     height: 600px;
 }
 
+#bite {
+    display: none;
+}
+
+#bite-editor {
+    width: 600px;
+    height: 400px;
+}
