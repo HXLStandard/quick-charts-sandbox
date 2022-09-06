@@ -4,10 +4,10 @@
 
 // Constant patterns
 var CONFIG_PATTERN = '{"configVersion":2,"bites": [{{BITE}}]}';
-var URL_PATTERN = "https://tools.humdata.org/quickcharts/app/show;url={{URL}};embeddedConfig={{CONFIG}}";
-var COOKBOOK_URL_PATTERN = "https://data.humdata.org/hxlpreview/show;url={{URL}};embeddedConfig={{CONFIG}};embeddedTitle={{TITLE}}"
+var URL_PATTERN = "https://data.humdata.org/tools/quickcharts/show;url={{URL}};embeddedConfig={{CONFIG}}";
+//var COOKBOOK_URL_PATTERN = "https://data.humdata.org/hxlpreview/show;url={{URL}};embeddedConfig={{CONFIG}};embeddedTitle={{TITLE}}"
 
-URL_PATTERN=COOKBOOK_URL_PATTERN
+//URL_PATTERN=COOKBOOK_URL_PATTERN
 /**
  * Set up on page load
  */
