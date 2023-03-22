@@ -6,52 +6,56 @@
     <meta charset="utf-8"/>
   </head>
   <body>
-    <h1>HDX Quick Charts Sandbox</h1>
 
-    <p>
-      Use this sandbox to experiment with writing your own bites
-      for HDX Quick Charts. (Recommend opening a JavaScript console to
-      see error messages from Quick Charts; you may need to disable ad
-      blockers.)
-    </p>
+    <header>
+      <h1>HDX Quick Charts Sandbox</h1>
 
-    <section id="config">
-      <h2>Configuration</h2>
-      <form>
-        <label>
-          Source URL for HXL-tagged data [<a href="http://hxlstandard.org">?</a>]
-          <input id="url" name="url" type="url" value="https://data.humdata.org/dataset/mozambique-cyclone-kenneth-3w-4w"/>
-        </label>
-        <label>
-          JSON bite [<a href="https://humanitarian.atlassian.net/wiki/display/HDX/Quick+Charts+JSON+formats">?</a>]
-          <textarea id="bite" name="bite" type="json">{
-  "title": "Countries of origin",
-  "type":"key figure",
-  "ingredient": {
-    "aggregateColumn": null,
-    "valueColumn": "#country+origin",
-    "aggregateFunction": "distinct-count"
-  },
-  "unit": "countries",
-  "numberFormat": "us"
-}</textarea>
-        </label>
-        <div id="bite-editor"></div>
-        <button type="submit">Show</button>
-      </form>
-    </section>
+      <p>
+        Use this sandbox to experiment with writing your own bites
+        for HDX Quick Charts. (Recommend opening a JavaScript console to
+        see error messages from Quick Charts; you may need to disable ad
+        blockers.)
+      </p>
+    </header>
 
-    <section id="preview">
-      <h2>Preview</h2>
+    <main>
 
-      <iframe id="chart" src=""></iframe>
+      <section id="config">
+        <form>
+          <label>
+            <span>Source URL for HXL-tagged data [<a
+            href="http://hxlstandard.org">?</a>]</span>
+            <input id="url" name="url" type="url" value="https://data.humdata.org/dataset/mozambique-cyclone-kenneth-3w-4w"/>
+          </label>
+          <label>
+            <span>JSON bite [<a href="https://humanitarian.atlassian.net/wiki/display/HDX/Quick+Charts+JSON+formats">?</a>]</span>
+            <textarea id="bite" name="bite" type="json">{
+            "title": "Countries of origin",
+            "type":"key figure",
+            "ingredient": {
+            "aggregateColumn": null,
+            "valueColumn": "#country+origin",
+            "aggregateFunction": "distinct-count"
+            },
+            "unit": "countries",
+            "numberFormat": "us"
+            }</textarea>
+          </label>
+          <div id="bite-editor"></div>
+          <button type="submit">Update</button>
+        </form>
+      </section>
 
-    </section>
+      <section id="preview">
+        <iframe id="chart" src=""></iframe>
+      </section>
 
-    <section id="embed">
+    </main>
+
+    <footer id="embed">
       <p><b>Embed URL:</b> <a id="embed-url"></a></p>
-    </section>
-      
+    </footer>
+    
     <script type="text/javascript" src="lib/ace/ace.js"></script>
     <script type="text/javascript" src="script.js"></script>
 
